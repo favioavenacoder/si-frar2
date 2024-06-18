@@ -5,9 +5,10 @@ cadenaNum= ningunconsol; suele fallar... //
 cifrar 1 2 5
 descifrar 6 4 3
 
-llaves de prueva
+llaves de prueva 2 5 78
 
-L1jif3q4njLN6g2M9FnSNpbyjmG7yEZvNXGJbRowUQMbumd3w84J
+
+L1j2if3q4nj5LN6g782M9FnSNpbyjmG7yEZvNXGJbRowUQMbumd3w84J
 
 
 
