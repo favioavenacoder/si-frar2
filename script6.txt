@@ -1,0 +1,110 @@
+// Solicitar primer texto mediante prompt
+let sextaCadenaNumerica = prompt("Ingresa la cadena numerica:");
+let segundoTexto = prompt("Ingresa el texto:");
+let segundoCadenaNumerica = convertirTextoACadenaNumerica(segundoTexto);
+
+
+function convertirTextoACadenaNumerica(texto) {
+  let cadenaNumerica = '';
+
+  for (let i = 0; i < texto.length; i++) {
+    let char = texto.charAt(i);
+    let valor = char.charCodeAt(0);
+
+    // Agrega el valor a la cadena numerica
+    cadenaNumerica += valor;
+
+    // Agrega una coma y un espacio si no es el ultimo caracter
+    if (i < texto.length - 1) {
+      cadenaNumerica += ', ';
+    }
+  }
+
+  return cadenaNumerica;
+}
+
+function crearArrayDesdeCadenaNumerica(cadenaNum) {
+  let resultado = [];
+  let numeros = cadenaNum.split(/[,\s]+/);
+
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] !== "") {
+      resultado.push(Number(numeros[i]));
+    }
+  }
+
+
+  return resultado;
+}
+function crearArrayDesdeCadenaNumerica2(cadenaNum2) {
+  let resultado = [];
+  let numeros = cadenaNum2.split(/[,\s]+/);
+
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] !== "") {
+      resultado.push(Number(numeros[i]));
+    }
+  }
+
+
+  return resultado;
+}
+
+function mesclarArrays(){
+  let posicion= 17;
+  let escala= 3;
+  let numeros = segundoCadenaNumerica.split(/[,\s]+/);
+
+  let mesmescla1 = array1;
+  let mesmescla2 = array2;
+
+mesmescla1[0+numeros[posicion]%escala] = mesmescla2[4+numeros[posicion]%escala];
+mesmescla1[4+numeros[posicion]%escala] = mesmescla2[0+numeros[posicion]%escala];
+
+mesmescla1[1+numeros[posicion]%escala] = mesmescla2[3+numeros[posicion]%escala];
+mesmescla1[3+numeros[posicion]%escala] = mesmescla2[1+numeros[posicion]%escala];
+
+mesmescla1[5+numeros[posicion]%escala] = mesmescla2[11+numeros[posicion]%escala];
+mesmescla1[11+numeros[posicion]%escala] = mesmescla2[5+numeros[posicion]%escala];
+
+mesmescla1[8+numeros[posicion]%escala] = mesmescla2[18+numeros[posicion]%escala];
+mesmescla1[18+numeros[posicion]%escala] = mesmescla2[8+numeros[posicion]%escala];
+
+mesmescla1[10+numeros[posicion]%escala] = mesmescla2[19+numeros[posicion]%escala];
+mesmescla1[19+numeros[posicion]%escala] = mesmescla2[10+numeros[posicion]%escala];
+
+mesmescla1[12+numeros[posicion]%escala] = mesmescla2[14+numeros[posicion]%escala];
+mesmescla1[14+numeros[posicion]%escala] = mesmescla2[12+numeros[posicion]%escala];
+
+mesmescla1[20+numeros[posicion]%escala] = mesmescla2[24+numeros[posicion]%escala];
+mesmescla1[24+numeros[posicion]%escala] = mesmescla2[20+numeros[posicion]%escala];
+
+mesmescla1[21+numeros[posicion]%escala] = mesmescla2[22+numeros[posicion]%escala];
+mesmescla1[22+numeros[posicion]%escala] = mesmescla2[21+numeros[posicion]%escala];
+
+mesmescla1[33+numeros[posicion]%escala] = mesmescla2[35+numeros[posicion]%escala];
+mesmescla1[35+numeros[posicion]%escala] = mesmescla2[33+numeros[posicion]%escala];
+
+mesmescla1[30+numeros[posicion]%escala] = mesmescla2[34+numeros[posicion]%escala];
+mesmescla1[34+numeros[posicion]%escala] = mesmescla2[30+numeros[posicion]%escala];
+
+array1= mesmescla1;
+array2= mesmescla2;
+}
+
+let cadenaNum = sextaCadenaNumerica;
+let cadenaNum2 = segundoCadenaNumerica;
+let array1 = crearArrayDesdeCadenaNumerica(cadenaNum);
+let array2 = [...array1];
+let array0 = crearArrayDesdeCadenaNumerica2(cadenaNum2);
+mesclarArrays();
+
+
+let cadenaNu1 = array1.join(', ');
+let cadenaNu2 = array2.join(', ');
+
+let ningunconsol = cadenaNu1;
+//console.log("segundo texto", cadenaNum2); 
+//console.log("sextaCadenaNumerica",sextaCadenaNumerica); 
+//console.log("mesklCadenaNumerica",cadenaNu1); 
+//console.log(cadenaNu2);
